@@ -1,7 +1,6 @@
 import React from "react";
-import { Col, Container, Row, Nav, Form, Tab, Tabs } from "react-bootstrap";
+import { Col, Container, Row, Tab, Tabs } from "react-bootstrap";
 import zeroToOne from "../assets/zero-to-one.jpg";
-import howToWin from "../assets/How-win-friends-and-influence-people.jpg";
 import BookCard from "./Bookcard";
 const Banner = () => {
   const books = [

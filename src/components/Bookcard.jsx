@@ -1,6 +1,5 @@
 import React from "react";
 import { Col} from "react-bootstrap";
-import zeroTo from "../assets/zero-to-one.jpg";
 
 const BookCard = ({ title, imgUrl, rating, review }) => {
   return (
