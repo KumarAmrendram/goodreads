@@ -1,7 +1,7 @@
 import React from "react";
 import { Col} from "react-bootstrap";
 
-const BookCard = ({ title, imgUrl, rating, review }) => {
+const BookCard = ({ title,author, imgUrl, rating, review }) => {
   return (
     <Col size={12} sm={12} md={5} lg={5} className="bookcard ">
       <div>
@@ -10,8 +10,9 @@ const BookCard = ({ title, imgUrl, rating, review }) => {
       <Col>
         <div className="book-txt">
           <h3>{title}</h3>
-          <span>Personal rating <b>{rating}</b></span><br/>
-          <span>{review}</span>
+          <span>{author}</span><br/>
+          <span>Personal rating:  <b>{rating}</b></span><br/>
+          <span><b>{review}</b> </span>
         </div>
       </Col>
     </Col>

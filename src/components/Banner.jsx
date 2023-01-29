@@ -1,20 +1,30 @@
 import React from "react";
 import { Col, Container, Row, Tab, Tabs } from "react-bootstrap";
 import zeroToOne from "../assets/zero-to-one.jpg";
+import deepWork from "../assets/deep-work.jpg";
 import BookCard from "./Bookcard";
 const Banner = () => {
-  const books = [
+  const Reading = [
     {
-      title: "Zero to One",
-      imgUrl: zeroToOne,
-      rating: "5/5",
-      review: `Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy
-      text ever since the 1500s, when an unknown printer took a galley
-      of type and scrambled it to make a type specimen book.`,
+      title: "Deep Work",
+      author: "Cal Newport",
+      imgUrl: deepWork,
+      rating: "?/5",
+      review: `Reading this book because I wanted to learn how to work for hours with deep focus.`
     },
   ];
 
+  const selfHelp = [
+    {
+      title: "Zero to One",
+      author: "Peter Thiel",
+      imgUrl: zeroToOne,
+      rating: "4.5/5",
+      review: `A great book for those who wants to  startup. you will get 
+      everything you need for starting up here. This book has answer of your every 
+      HOWs, WHATs and WHYs.`,
+    },
+  ];
   return (
     <section className="banner">
       <Container className="text-center mt-3">
@@ -31,15 +41,23 @@ const Banner = () => {
                 title="Reading"
               >
                 <Row className="">
-                  {books.map((book, index) => {
+                  {Reading.map((book, index) => {
                     return <BookCard key={index} {...book} />;
                   })}
                 </Row>
               </Tab>
-              <Tab className="tab" eventKey="second" title="Self Help">
-                <h1>Working on it...</h1>
+              <Tab
+                className="row tab mt-3 align-items-center"
+                eventKey="second"
+                title="Business"
+              >
+                <Row className="">
+                  {selfHelp.map((book, index) => {
+                    return <BookCard key={index} {...book} />;
+                  })}
+                </Row>
               </Tab>
-              <Tab className="tab" eventKey="third" title="Business">
+              <Tab className="tab" eventKey="third" title="Self Help">
                 <h1>Working on it...</h1>
               </Tab>
               <Tab className="tab" eventKey="fourth" title="Fiction">
