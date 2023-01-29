@@ -34,7 +34,7 @@ const Banner = () => {
               <span className="highlighted">Goodreads 📚</span>
             </h1>
             <p>Checkout my favorite Books. Select a genre to get started</p>
-            <Tabs justify variant="pills" defaultActiveKey="first">
+            <Tabs className="d-flex justify-content-center" justify variant="pills" defaultActiveKey="first">
               <Tab
                 className="row tab mt-3 align-items-center"
                 eventKey="first"
@@ -67,6 +67,8 @@ const Banner = () => {
           </Col>
         </Row>
       </Container>
+    <footer className="container-fluid text-center text-bg-warning">developed by <a href="https://instagram.com/amrendtam_">amrendram</a></footer>
+
     </section>
   );
 };
